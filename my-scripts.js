@@ -3,7 +3,7 @@ var mylist = (JSON.parse(localStorage.getItem("mybrowsersession")) || [])
 
 // create items
 function createItem() {
-	var newItem = {text: window.prompt("Enter your item here:") , style:"none"}
+	var newItem = {text: window.prompt("Enter your name here:") , style:"none"}
 	mylist.push(newItem)
 	localStorage.setItem("mybrowsersession", JSON.stringify(mylist))
 	printItem(newItem)
