@@ -1,5 +1,6 @@
 
-
+<html>
+<body>
 
 <?php
 	$dbhost = "destinations.coajuzoc6wxq.us-west-2.rds.amazonaws.com";
@@ -33,5 +34,8 @@ if (!mysql_query($sql,$con))
 
 echo "1 record added";
 
-mysql_close($con)
+mysql_close($con);
 ?>
+	
+</body>
+</html>
