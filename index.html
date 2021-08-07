@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<title>Juan Garces - TESY-4730 Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+
+<body>
+<?php include 'connect.php';?>
+<?php include 'insert.php';?>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">TESY-4730 Project</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#destinations" class="w3-bar-item w3-button">Destinations</a>
+      <a href="#share" class="w3-bar-item w3-button">Share</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="https://staticblog.virtualvocations.com/2018/01/iStock-891573112.jpg" alt="Favorite Travels Blog" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Favorite Travels Blog</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="https://res.cloudinary.com/acloud-guru/image/fetch/c_thumb,f_auto,h_212,q_auto,w_212/https://acg-wordpress-content-production.s3.us-west-2.amazonaws.com/app/uploads/2020/07/aws_square_2x.png" class="w3-round w3-image w3-opacity-min" alt="AWS" width="300" height="300">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About this Project</h1><br>
+      <h5 class="w3-center">TESY-4730</h5>
+      <p class="w3-large">This site will serve as a blog where everyone can post and share their favorite trip destination along with a <span class="w3-tag w3-light-grey"> picture </span> of said destination.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">By using AWS to host a static website, I setup S3 and RDS to store the data entered by users, as well as pictures of users' travels that have been uploaded to the site.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Destination Section -->
+  <div class="w3-row w3-padding-64" id="destinations">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Destinations</h1><br>
+	  <h4>Most recent entries</h4>
+      <p class="w3-text-grey">By: John Doe</p><br>
+	  <p class="w3-text-grey">Place: Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+	  <p class="w3-text-grey">Date:</p><br>
+	  <p class="w3-text-grey">Entry:</p><br>
+	  <p class="w3-text-grey"></p><br>
+	  
+    
+      <h4>Honey Almond Granola with Fruits</h4>
+      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+      <h4>Belgian Waffle</h4>
+      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+    
+      <h4>Scrambled eggs</h4>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+      <h4>Blueberry Pancakes</h4>
+      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="https://www.fernandovillamorjr.com/wp-content/uploads/2018/03/pexels-photo-732632.jpeg" class="w3-round w3-image w3-opacity-min" alt="Travel" style="width:200%">
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Share Section -->
+  <div class="w3-container w3-padding-64" id="shared">
+    <h1>Got a travel memory to share?</h1><br>
+    <p>Please use the form below to add an entry and share with us a favorite memory of one of your travels, and include a picture of said place... The more details, the better.</p>
+    <p class="w3-text-blue-grey w3-large"><b>- Share your favorite travel destination -</b></p>
+    <p>Please do not enter any personal information, as this site is public and can be accessed by anyone with an internet connection.</p>
+
+    <form action="insert.php" method="POST">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="First Name" name="firstname"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Last Name" name="lastname"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Location (City)" name="cityy"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Location (Country)" name="countryy"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="When (MONTH/YEAR)" name="datee"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="(300 character max.) Brief description of your trip and any other important details about this trip you took. i.e. culture, people, things to do, etc:" name="descriptionn"></p>
+	  <p><input class="w3-button w3-light-grey w3-section" type="submit" name="posteed" value="SHARE" /></p
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>TESY-4730 - Juan Garces | Utah State University | <a href="https://catalog.usu.edu/preview_program.php?catoid=12&poid=17637&hl=TECHNOLOGY+SYSTEMS&returnto=search" title="Technology Systems: Information and Computer Technology - BS" target="_blank" class="w3-hover-text-green">Technology Systems: Information and Computer Technology - BS</a></p>
+</footer>
+
+</body>
+</html>
