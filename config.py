@@ -1,0 +1,7 @@
+customhost = "destinations.coajuzoc6wxq.us-west-2.rds.amazonaws.com"
+customuser = "dbuser"
+custompass = "dbpassword"
+customdb = "destination"
+customtable = "destination"
+custombucket = "add-destination"
+customregion = "us-west-2"
